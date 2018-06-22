@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+	Lab 09 - Dropbox Javascript API.
+</title>
+<link rel="stylesheet" type="text/css" href="./css/homework.css">
+ <script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js"></script>
+ <script src="./js/dropboxapi.js"></script>
+</head>
+<body>
+<div id="navbar">
+  <button id="last" class="button-common" style="margin-left:5px;"><a href="./scrumpler_lab07.html">&#x2190; Last Lab</a></button>
+  <button id="next" class="button-common righter"><a href="./scrumpler_lab09.html">&rarr; Next Lab</a></button>
+</div>
+<div id="jbox" class="homework">
+  <div id="nbox">
+  <p class="spacer"> Save and display data in the elements below</p>
+  <div style="border-style: dotted; border-width: 0 0 1px 0; width:100%;"></div>
+  <p class="spacer">First Name: <input class="righter" type="text" name="fname" id="fname"></p>
+  <p class="spacer">Last Name: <input class="righter" type="text" name="lname" id="lname"></p>
+  <p class="spacer">Phone Number: <input class="righter" type="text" name="pnumber" id="pnumber"></p>
+  <p class="spacer">Address: <input class="righter" type="text" name="address" id="address"></p><br/>
+  </div>
+  <div id="abox" style="margin-bottom:5px;">
+  <button id="objectUse" class="button-common" style="margin-left:5px;" onClick="objectUse()">Save</button>
+  </div>
+</div>
+</body>
+</html>

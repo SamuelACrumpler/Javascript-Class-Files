@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Card Densetsu - Final Lab
+</title>
+<meta name="theme-color" content="#29BDBB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" sizes="192x192" href="./densetsu-icon-256.png">
+<link rel="manifest" href="./manifest.json">
+
+
+
+
+</head>
+<body>
+<div id="main">
+	<div id="eventcharwrapper" class="col-md-12"> 
+		<div id="eventwindow" class="bordset col-md-8">
+		<!-- Width should be around 60% -->
+		<!-- Background goes in here, use stretch to make it take up the entire space of the div -->
+		<!-- hold this: /images/monscorp.png -->
+		<div id="monimagewrapper">
+			<img async id="monChar" src="" alt="Current Monster"> 
+		</div>
+			<!-- Monster image needs to be centered properly --->
+		</div>
+		<div id="charwindow" class="bordset col-md-4"> <!-- Width should be around 40% -->
+				<div id="charpic"  class="col-xs-4 visible-xs-block">
+					<img src="./images/charsprite.png" alt="Character Sprite" class="img-responsive" style="width:50%;"> 
+				</div>
+				<div id="charpic"  class="col-md-4 hidden-xs">
+					<img src="./images/charsprite.png" alt="Character Sprite" class="img-responsive"> 
+				</div>
+				<div class="col-md-8 col-xs-8"">
+					<div id="hpdisplay" class="text-center"><span id="hplabel">HP:</span><span id="curhp">000</span><span>/</span><span id="maxhp">000</span></div>
+					<div id="hpbar" class="pbar">
+						<div id="hpbarvalue">
+						</div>
+					</div>
+					<div id="spdisplay" class="text-center"><span id="splabel">SP:</span><span id="cursp">000</span><span>/</span><span id="maxsp">000</span></div>
+					<div id="spbar" class="pbar">
+						<div id="spbarvalue">
+						</div>
+					</div>
+		</div>
+	</div>
+	<div id="datawrapper" class="col-md-12 bordset">
+		<span>STR: </span><span id="strnum">1</span><span>DEX: </span><span id="dexnum">1</span>
+		<span>CON: </span><span id="connum">1</span><span>INT: </span><span id="intnum">1</span>
+		<span>Battles: </span><span id="battles">1</span>
+	</div>
+	<div id="actionwrapper" class="col-md-12 bordset">
+		<button id="defend" class="btn btn-default" onClick="defend()">Defend</button>
+		<button id="powerStrike" class="btn btn-default" onClick="charpower()">Power</button>
+	</div>
+	<div id="cardwrapper" class="bordset col-md-12">
+		<div id="cardwrap0" class="card" onclick="clickCard0()">
+			<img async id="card0" class="img-responsive" src="" alt="Current Monster"> 
+			<div class="card-content">
+			<p id="cValue0" class="text-center">00</p>
+			<p id="cPercent0" class="text-center">00%</p>
+			<p id="cEffect0" class="text-center">Effect Name<p>
+			</div>
+		</div>
+		<div id="cardwrap1" class="card" onclick="clickCard1()">
+			<img async id="card1" class="img-responsive" src="" alt="Current Monster"> 
+			<div class="card-content">
+			<p id="cValue1" class="text-center">00</p>
+			<p id="cPercent1" class="text-center">00%</p>
+			<p id="cEffect1" class="text-center">Effect Name<p>
+			</div>
+		</div>
+		<div id="cardwrap2" class="card" onclick="clickCard2()">
+			<img async id="card2" class="img-responsive" src="" alt="Current Monster"> 
+			<div class="card-content">
+			<p id="cValue2" class="text-center">00</p>
+			<p id="cPercent2" class="text-center">00%</p>
+			<p id="cEffect2" class="text-center">Effect Name<p>
+			</div>
+		</div>
+		<div id="cardwrap3" class="card" onclick="clickCard3()">
+			<img async id="card3" class="img-responsive" src="" alt="Current Monster"> 
+			<div class="card-content">
+			<p id="cValue3" class="text-center">00</p>
+			<p id="cPercent3" class="text-center">00%</p>
+			<p id="cEffect3" class="text-center">Effect Name<p>
+			</div>
+		</div>
+		<div id="cardwrap4" class="card" onclick="clickCard4()">
+			<img async id="card4" class="img-responsive" src="" alt="Current Monster"> 
+			<div class="card-content">
+			<p id="cValue4" class="text-center">00</p>
+			<p id="cPercent4" class="text-center">00%</p>
+			<p id="cEffect4" class="text-center">Effect Name<p>
+			</div>
+		</div>
+	</div>
+	<div id="logwrapper" class="bordset col-md-12" onload="loadGame()">
+		<textarea id="gamelog" columns="10" rows = "5" readonly></textarea>
+	</div>
+</div>
+
+<div id="levelModal" class="levelModal">
+  <!--- make all the buttons --->
+  <div id="lModalCon" class="lModalCon">
+    <div style="text-align:center;">Pick a stat to raise.</div>
+		<div id="statrow1">
+		  <div id="strwrapper" class="statwrapper">
+		   <button id="strup" onClick="strUP()">Str</button>
+		  </div>
+		  <div id="dexwrapper" class="statwrapper">
+		   <button id="dexup" onClick="dexUP()">Dex</button>
+		  </div>
+		</div>
+		 <div id="statrow2">
+		  <div id="conwrapper" class="statwrapper">
+		   <button id="conup" onClick="conUP()">Con</button>
+		  </div>
+		  <div id="intwrapper" class="statwrapper">
+		   <button id="intup" onClick="intUP()">Int</button>
+		  </div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+<link async rel="stylesheet" href="./css/densetsu.css">
+<link async rel="stylesheet" href="./css/bootstrap.min.css">				
+ <script async src="./js/densetsu.js"></script>
+ <script async src="./js/jquery-3.1.1.min.js"></script>
+ <script async src="./js/bootstrap.min.js"></script>
+  <span onload="loadGame()"></span>
+</body>
+</html>

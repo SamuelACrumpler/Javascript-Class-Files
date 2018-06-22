@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+	Lab 04 - Addition of two numbers chosen at random.
+</title>
+<link rel="stylesheet" type="text/css" href="./css/homework.css">
+<script src="./js/rand_add.js"></script>
+</head>
+<body>
+<div id="navbar">
+  <button id="last" class="button-common" style="margin-left:5px;"><a href="./scrumpler_lab03.html">&#x2190; Last Lab</a></button>
+  <button id="next" class="button-common righter"><a href="./scrumpler_lab05.html">&rarr; Next Lab</a></button>
+</div>
+<div id="jbox" class="homework">
+  <div id="nbox">
+  <p class="spacer"> Click Calculate to add the random numbers.</p>
+  <div style="border-style: dotted; border-width: 0 0 1px 0; width:100%;"></div>
+  <p class="spacer">First Number: <input class="righter" type="text" name="firstnum" id="firstNumber" readonly=""></p>
+  <p class="spacer">Second Number: <input class="righter" type="text" name="secondnum" id="secondNumber" readonly=""></p><br/>
+  </div>
+  <div id="abox" style="margin-bottom:5px;">
+  <p class="spacer">Answer Number: <input class="righter" type="text" name="answer" id="calcAnswer" readonly=""></p>
+  <button id="calculate" class="button-common" style="margin-left:5px;" onClick="randAdd()">Calculate</button>
+  <button id="clear" class="button-common" style="margin-left:5px;" onClick="clearInput()">Clear</button>
+  </div>
+</div>
+</body>
+</html>

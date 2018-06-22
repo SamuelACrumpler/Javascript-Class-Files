@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>This is a title page</title>
+<link rel="stylesheet" type="text/css" href="./css/homework.css">
+</head>
+<body>
+<div id="navbar">
+  <button id="last" class="button-common" style="margin-left:5px;"><a href="./">&#x2190; Home</a></button>
+  <button id="next" class="button-common righter" style="margin-left:5px;"><a href="./scrumpler_lab02.html">&rarr; Next Lab</a></button>
+</div>
+<h1>This is a heading</h1>
+<h2>This is a heading as well</h2>
+<button type="button" onclick="document.getElementById('demo').innerHtml = 'It works!'"> Header Changer </button>
+
+<p> This is a paragraph
+
+I'm pretty sure anyway</p>
+<canvas id="myCanvas" width="200" height="200" style="border:2px solid #000000;">
+</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctr.arc(95,50,0,2*Math.PI);
+ctx.stroke();
+</script>
+</body>
+</html>

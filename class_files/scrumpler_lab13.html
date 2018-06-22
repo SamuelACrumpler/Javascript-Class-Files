@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+	Lab 13 - Add some form of data validation to a previous project
+</title>
+<link rel="stylesheet" type="text/css" href="./css/homework.css">
+<script src="./js/mgdataval.js"></script>
+</head>
+<body onload="firstRun()">
+<div id="navbar">
+  <button id="last" class="button-common" style="margin-left:5px;"><a href="./scrumpler_lab11.html">&#x2190; Last Lab</a></button> <button id="flocal" class="button-common" style="margin-left:5px;" onClick="localStorage.clear();">Reset</button>
+</div>
+<div id="jbox" class="homework">
+  <div id="nbox">
+  <p class="spacer"> Perform the math problems given to you randomly. Note: Division rounding is based on the tenths place. The game will keep track of your score until you refresh</p>
+  <div style="border-style: dotted; border-width: 0 0 1px 0; width:100%;"></div>
+  <p class="spacer">First Number: <input class="righter" type="text" name="firstnum" id="firstNumber" readonly=""></p>
+  <p class="spacer">Operator: <input class="righter" type="text" name="operator" id="operatorSign" readonly=""></p>
+  <p class="spacer">Second Number: <input class="righter" type="text" name="secondnum" id="secondNumber" readonly=""></p><br/>
+  </div>
+  <div id="abox" style="margin-bottom:5px;">
+  <p class="spacer">Answer Number: <input class="righter" type="text" name="answer" id="calcAnswer"></p>
+  <span>
+  <button id="calculate" class="button-common" style="margin-left:5px;" onClick="randMathQuestion()">Check Answer</button>
+  <button id="score" class="button-common" style="margin-left:5px;" onClick="scoreRequest()">Score</button>
+  <button id="clear" class="button-common" style="margin-left:5px;" onClick="resetInput()">Reset</button>
+  </span><br />
+   <div id="abox" style="margin-top:5px;margin-bottom:5px;">
+  <input type="text" name="answer" id="userName" style="max-width:50%; width:100%;height:20px;margin-left:5px;"><button id="UserSubmit" class="button-common" style="margin-left:5px;" onClick="insertHighScore()">Submit Score</button>
+  </div>
+  </div>
+</div>
+</body>
+</html>

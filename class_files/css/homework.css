@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS For the homework */
+
+html {background-image: url("../small_steps.png")}
+html {background-color:	#F5F5F5;}
+
+#hometitle {text-align: center;}
+
+.homework, .button-common, #navbar { box-shadow: 2px 2px 5px;}
+
+.homework {border-style:solid; background-color: grey; border-radius:8px; box-shadow: 2px 2px 5px;}
+
+.homework li {list-style: none;}
+
+.righter {float: right;}
+
+.spacer {margin: 10px;}
+
+.padspacer{padding:5px;}
+
+.button-common {background-color: #D3D3D3; border-width:2px; border-radius: 8px; border: solid; border-color:#000000; color: #000000; padding: 5px 8px; 
+text-align: center; text-decoration: none; display: inline-block; font-size: 16px; -moz-transition-duration: 0.4s; -webkit-transition-duration: 0.4s; /* Safari */
+-o-transition-duration: 0.4s; transition-duration: 0.4s;} /*most sscript taken from w3schools*/
+
+.button-common:active {box-shadow:none;}
+
+#wrapper #navbar {width:100%;}
+#navbar {border-style:solid; border-width: 0 2px 2px 2px; background-color: grey; margin-bottom:10px; border-radius: 8px; box-shadow: 2px 2px 5px;}
+#navbar a {text-decoration: none; color:black;}
+
+/* Lab Specific CSS */
+#jbox {width:300px; margin: 0 auto; }
+#jbox input {width:50px;}
+#nbox {border-style: solid; border-width: 0 0 1px 0; padding-bottom: 5px;}
